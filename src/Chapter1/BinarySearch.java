@@ -22,6 +22,10 @@ public class BinarySearch {
     public static void main(String[] args) {
         int[] whitelist = In.readInts();
         Arrays.sort(whitelist);
+
+//        if (StdIn.isEmpty()) {
+//            StdOut.println("StdIn is Empty");
+//        }
         while (!StdIn.isEmpty()) {
             int key = StdIn.readInt();
             if (rank(key, whitelist) == -1) {
