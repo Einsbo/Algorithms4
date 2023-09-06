@@ -6,31 +6,35 @@ import edu.princeton.cs.algs4.StdOut;
 
 import java.util.Arrays;
 
-public class BinarySearch {
-    public static int rank(int key, int[] a) {
-        int lo = 0;
+/**
+ * <b>二分查找</b>
+ *
+ * <p>接受一个白名单文件（一列整数）作为参数，过滤掉标准输入中的所有存在于白名单中的条目，仅将不存在于白名单中的整数打印到标准输出中。
+ */
+public class BinarySearch
+{
+    public static int rank(int key, int[] a)
+    {  // 数组必须是有序的
+        int lo  = 0;
         int hi = a.length - 1;
-        while (lo <= hi) {
+        while (lo <= hi)
+        {  // 被查找的键要么不存在，要么必然存在于 a[lo..hi] 之中
             int mid = lo + (hi - lo) / 2;
             if      (key < a[mid]) hi = mid - 1;
             else if (key > a[mid]) lo = mid + 1;
-            else                    return mid;
+            else                   return mid;
         }
         return -1;
     }
-
-    public static void main(String[] args) {
-        int[] whitelist = In.readInts();
+    public static void main(String[] args)
+    {
+        int[] whitelist = In.readInts(args[0]);
         Arrays.sort(whitelist);
-
-//        if (StdIn.isEmpty()) {
-//            StdOut.println("StdIn is Empty");
-//        }
-        while (!StdIn.isEmpty()) {
+        while (!StdIn.isEmpty())
+        {  // 读取键值，如果不存在于白名单中则将其打印
             int key = StdIn.readInt();
-            if (rank(key, whitelist) == -1) {
+            if (rank(key, whitelist) < 0)
                 StdOut.println(key);
-            }
         }
     }
 }
