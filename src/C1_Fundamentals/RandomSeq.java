@@ -1,4 +1,4 @@
-package Basic;
+package C1_Fundamentals;
 
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;

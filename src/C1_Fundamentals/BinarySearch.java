@@ -1,4 +1,4 @@
-package Basic;
+package C1_Fundamentals;
 
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdIn;
