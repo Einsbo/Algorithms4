@@ -133,6 +133,67 @@ int[] b = a;
 b[3] = 567; // a[3] 也会变成 567
 ```
 
+#### 1.1.5.5 二维数组
+```Java
+double[][] a = new double[M][N];
+// 等价于
+double[][] a;
+a = new double[M][N];
+for (int i = 0; i < M; i++) 
+    for (int j = 0; i < N; j++)
+        a[i][j] = 0;
+```
+
+## 1.1.6 静态方法
+> 静态方法是一组在被调用时会被顺序执行的语句。修饰符 `static` 将这类方法和**实例方法**区别开来。
+
+### 1.1.6.1 静态方法
+典型静态方法的实现
+```Java
+// 计算一个整数的绝对值
+public static int abs(int x) {
+    if (x < 0)  return -x;
+    else        return x;
+}
+
+// 计算一个浮点数的绝对值
+public static double abs(double x) {
+    if (x < 0.0)    return -x;
+    else            return x;
+}
+
+// 判定一个数是否为素数
+public static boolean isPrimse(int N) {
+    if (N < 2) retirm false;
+    for (int i = 2; i * i <= N; i++) 
+        if (N % i == 0) return false;
+    return true;
+}
+
+// 计算平方根（牛顿迭代法）
+public static double sqrt(double c) {
+    if (c < 0) return Double.NaN;
+    double err = 1e-15;
+    double t = c;
+    while (Math.abs(t - c / t) > err * t)
+        t = (c / t + t) / 2.0;
+    return t;
+}
+
+// 计算直角三角形的斜边
+public static double hypotenuse(double a, double b) {
+    return Math.sqrt(a * a, b * b);
+}
+
+// 计算调和级数
+public static double H(int N) {
+    double sum = 0.0;
+    for (int i = 1; i <= N; i++)
+        sum += 1.0 / i;
+    return sum;
+}
+```
+
 ### 1.1.9.5 重定向与管道
 
 **重定向输出**：可以将程序的标准输出**重定向**到另一个文件，文件的内容既可以永久保存也可以在之后作为另一个程序的输入：
