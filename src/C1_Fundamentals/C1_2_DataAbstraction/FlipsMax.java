@@ -5,7 +5,7 @@ import edu.princeton.cs.algs4.StdRandom;
 
 /**
  * <b>将对象作为返回值</b>
- * <p><b>运行及输出: </b>
+ * <p><b>输入/输出: </b>
  * <pre>
  *     % java Flips Max 1000000
  *     500149 tails wins

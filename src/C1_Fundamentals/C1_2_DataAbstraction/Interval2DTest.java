@@ -2,6 +2,16 @@ package C1_2_DataAbstraction;
 
 import edu.princeton.cs.algs4.*;
 
+/**
+ * <b>Interval2D 的测试用例</b>
+ * <p><b>输入/输出:</b>
+ * <pre>
+ *     % java Interval2DTest .2 .5 .5 .6 10000
+ *     342 hits
+ *     0.029999999999999992
+ * </pre>
+ *
+ */
 public class Interval2DTest {
     public static void main(String[] args) {
         double xlo = Double.parseDouble(args[0]);

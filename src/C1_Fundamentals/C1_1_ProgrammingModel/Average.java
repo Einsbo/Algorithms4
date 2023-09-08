@@ -1,9 +1,19 @@
+package C1_1_ProgrammingModel;
+
 import edu.princeton.cs.algs4.StdIn;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
  * <b>标准输入
- * <p>计算输入的平均值，{@code <ctrl-d>}结束输入
+ * <p><b>输入/输出:</b>
+ * <pre>
+ *      1.23456
+ *      2.34567
+ *      3.45678
+ *      4.56789
+ *      ^D
+ *      Average is 2.90123
+ * </pre>
  */
 public class Average {
     public static void main(String[] args) {
