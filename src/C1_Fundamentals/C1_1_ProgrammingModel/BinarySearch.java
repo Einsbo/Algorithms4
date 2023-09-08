@@ -9,8 +9,8 @@ import java.util.Arrays;
 
 /**
  * 要执行一个 Java 程序，首先需要用 javac 命令编译它，然后再用 java 命令运行它。
- * <p>下面代码第一行生成一个 BinarySearch.class 的文件，其中包含本程序的 Java 字节码，第二行将 LargeW.txt 作为参数传给 main，并重定向
- * 输入至 LargeT.txt
+ * <p>下面代码第一行生成一个 BinarySearch.class 的文件，其中包含本程序的 Java 字节码，第二行将 LargeW.txt 作为参
+ * 数传给 main，并重定向输入至 LargeT.txt
  * <pre>
  *     javac BinarySearch.java
  *     java BinarySearch largeW.txt < largeT.txt
