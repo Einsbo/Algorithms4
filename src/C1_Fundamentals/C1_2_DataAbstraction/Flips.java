@@ -1,3 +1,5 @@
+package C1_2_DataAbstraction;
+
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 

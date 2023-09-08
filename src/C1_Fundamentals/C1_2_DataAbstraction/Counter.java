@@ -1,3 +1,5 @@
+package C1_2_DataAbstraction;
+
 /**
  * <b>Counter 类</b>
  * <p>

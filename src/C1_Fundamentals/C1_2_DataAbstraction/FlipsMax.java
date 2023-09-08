@@ -1,8 +1,16 @@
+package C1_2_DataAbstraction;
+
 import edu.princeton.cs.algs4.StdOut;
 import edu.princeton.cs.algs4.StdRandom;
 
 /**
  * <b>将对象作为返回值</b>
+ * <p><b>运行及输出: </b>
+ * <pre>
+ *     % java Flips Max 1000000
+ *     500149 tails wins
+ * </pre>
+ *
  */
 public class FlipsMax {
     public static Counter max(Counter x, Counter y) {
