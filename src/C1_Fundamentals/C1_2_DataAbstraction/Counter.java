@@ -1,5 +1,7 @@
 package C1_2_DataAbstraction;
 
+import edu.princeton.cs.algs4.StdOut;
+
 /**
  * <b>Counter 类</b>
  * <p>
@@ -8,23 +10,40 @@ package C1_2_DataAbstraction;
  * 计数器加一。也可以在分析算法性能时使用 {@code Counter} 来记录基本操作的调用次数。
  */
 
-public class Counter {
-    int counter;
-    String counter_id;
-    Counter(String id) {
-        counter = 0;
-        counter_id = id;
+public class Counter { // 类名
+    // 实例变量
+    private final String name;
+    private int count;
+
+    // 构造函数
+    public Counter(String id) {
+        name = id;
     }
+
+    // 实例方法
     public void increment() {
-        counter++;
+        count++;
     }
 
     public int tally() {
-        return counter;
+        return count;
     }
 
     @Override
     public String toString() {
-        return counter + " " + counter_id;
+        return count + " " + name;
+    }
+
+    // 测试用例
+    public static void main(String[] args) {
+        Counter heads = new Counter("heads"); // 触发构造函数
+        Counter tails = new Counter("tails");
+
+        heads.increment();
+        heads.increment();
+        tails.increment();
+
+        StdOut.println(heads + " " + tails); // 自动调用 toString()
+        StdOut.println(heads.tally() + tails.tally());
     }
 }
