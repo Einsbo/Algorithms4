@@ -25,6 +25,22 @@ public class Date1 {
         return month() + "/" + day() + "/" + year();
     }
 
+    @Override
+    public boolean equals(Object x) {
+        // 如果该对象的引用和参数对象的引用相同，返回 true
+        if (this == x) return true;
+        // 如果参数为 null，根据约定返回 false
+        if (x == null) return false;
+        // 如果两个对象的类不同，返回 false
+        if (this.getClass() != x.getClass()) return false;
+        // 将参数对象的类型从 Object 转换到 Date1，如果任意实例变量的值不同，返回 false
+        Date1 that = (Date1) x;
+        if (this.day != that.day)       return false;
+        if (this.month != that.month)   return false;
+        if (this.year != that.year)     return false;
+        return true;
+    }
+
     /**
      * 测试用例
      * <pre>

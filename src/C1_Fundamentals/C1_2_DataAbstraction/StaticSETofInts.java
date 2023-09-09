@@ -36,7 +36,7 @@ public class StaticSETofInts {
 
     /**
      * <pre>
-     *     % java Whitelist largeW.txt < largeT.txt
+     *¡⁄!     % java Whitelist largeW.txt < largeT.txt
      * </pre>
      */
     public static void main(String[] args) {
