@@ -2,6 +2,9 @@ package C1_3_BagsQueuesAndStacks;
 
 import java.util.Iterator;
 
+/**
+ * 下压（LIFO）栈（能够动态调整数组大小的实现）
+ */
 public class ResizingArrayStack<Item> implements Iterable<Item> {
 
     private Item[] a = (Item[]) new Object[1];  // 栈元素
